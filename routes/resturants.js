@@ -1,4 +1,5 @@
 var express=require("express");
+const moment=require('moment');
 var router=express.Router();
 var hotel=require("../models/hotel");
 var middleware=require("../middleware");
@@ -42,19 +43,13 @@ router.get("/new",middleware.isLoggedIn,function(req,res){
     res.render("new.ejs");
 });
 router.get("/:id",function(req,res){
-    var d = new Date();
-        var date = d.getDate();
-    var month = d.getMonth() + 1; // Since getMonth() returns month from 0-11 not 1-12
-    var year = d.getFullYear();
-    // console.log(dateStr);
-    var dateStr = date + "/" + month + "/" + year;
-    console.log(dateStr);
+    
     hotel.findById(req.params.id).populate("comments").exec(function(err,foundResturant){
         if(err)
         console.log(err);
         else
         // console.log(foundResturant);
-        res.render("show",{resturant:foundResturant,date:dateStr});
+        res.render("show",{resturant:foundResturant,moment:moment});
     });
     });
 
