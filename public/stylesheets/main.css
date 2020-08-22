@@ -10,3 +10,22 @@
 #delete-form {
     display: inline;
 }
+body{
+    font-family: 'Alata', sans-serif;
+
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.comment{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+    text-align: justify;
+    
+}
+.button {
+    color: black;
+    margin: 10px;
+}
+.post{
+    line-height: 1.5;
+    text-align: center;
+}

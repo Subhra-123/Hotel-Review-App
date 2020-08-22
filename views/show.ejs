@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="col-md-9">
-            <div class="thumbnail">
+            <div class="thumbnail post">
                 <img class="img-responsive"class="img-fluid" alt="Responsive image" style="width:100%" src="<%=resturant.image %>">
               <div class="caption-full">
                 <h4 class="pull-right">Rs 4000/night</h4>
@@ -27,12 +27,14 @@
         <%}%>
             </div>
         </div>
-            <div class="well">
-                <div class="text-right">
-                    <a class="btn btn-success" href="/hotels/<%=resturant._id%>/comments/new">Write A Review</a>
-                </div>
+        <div class="text-right ">
+            <a class="btn btn-success button" href="/hotels/<%=resturant._id%>/comments/new">Write A Review</a>
+        </div>
+        <%resturant.comments.forEach(function(comment){%>
+            <div class="well comment">
+                
                 <hr>
-                <%resturant.comments.forEach(function(comment){%>
+                
                     <div class="row">
                         <div class="col-md-12">
                             <strong><%=comment.author.username%></strong>
@@ -51,9 +53,10 @@
 
                         </div>
                     </div>
-                    <%})%>
+                    
 
             </div>
+            <%})%>
         
         </div>
     </div>
