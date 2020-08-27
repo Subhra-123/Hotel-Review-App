@@ -18,8 +18,10 @@ body{
 .comment{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5;
-    text-align: justify;
-    
+    text-align: justify;    
+}
+.comment p{
+    margin: 10px 0px 10px 0px;
 }
 .button {
     color: black;
@@ -29,3 +31,24 @@ body{
     line-height: 1.5;
     text-align: center;
 }
+.post p{
+    text-align: justify;
+    padding: 10px;
+}
+
+.img_style{
+    height: 223px;
+    size: 100% 100%;
+    
+}
+.img_style img{
+    height: inherit;
+    size: 100% 100%;
+}
+.caption h4{
+    text-transform: capitalize;
+}
+
+
+
+

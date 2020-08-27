@@ -13,9 +13,9 @@
     <div class="row text-center" style="display:flex; flex-wrap:wrap;">
         <% resturants.forEach(function(resturant){%>
                 <div class="col-md-3 col-sm-6">
-                    <div class="thumbnail">
-                        <img src="<%=resturant.image%>">
-                        <div class="caption">
+                    <div class="thumbnail" style="height: 360px;">
+                        <div class="img_style"><img classs="img-responsive " src="<%=resturant.image%>"></div>
+                        <div class="caption" style="text-transform: capitalize;">
                             <h4><%= resturant.name %></h4>
                         </div>
                         <p>
