@@ -35,8 +35,7 @@ router.post("/",middleware.isLoggedIn,function(req,res){
                 else
                 {
                     comment.author.id=req.user._id;
-            comment.author.username=req.user.username;comment.date=new Date;
-            console.log(comment.date);
+            comment.author.username=req.user.username;
             comment.save();
                     resturant.comments.push(comment);
                   resturant.save();

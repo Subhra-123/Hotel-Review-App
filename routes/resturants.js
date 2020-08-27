@@ -16,14 +16,14 @@ router.get("/",function(req,res){
     
 });
 router.post("/",middleware.isLoggedIn,function(req,res){
-var name=req.body.name;var image=req.body.image;var desc = req.body.description;
+var name=req.body.name;var image=req.body.image;var desc = req.body.description;var price=req.body.price;
 var author={
     id:req.user._id,
     username:req.user.username
 }
-var newResturant={name:name,image:image,description:desc,author:author};
-//create a new campground and save to database
-hotel.create(newResturant,function(err,newresturant){
+var newHotel={name:name,image:image,description:desc,price:price,author:author};
+//create a new hotel and save to database
+hotel.create(newHotel,function(err,newhotel){
     if(err)
     console.log('something went wrong');
     else
@@ -44,12 +44,12 @@ router.get("/new",middleware.isLoggedIn,function(req,res){
 });
 router.get("/:id",function(req,res){
     
-    hotel.findById(req.params.id).populate("comments").exec(function(err,foundResturant){
+    hotel.findById(req.params.id).populate("comments").exec(function(err,foundHotel){
         if(err)
         console.log(err);
         else
         // console.log(foundResturant);
-        res.render("show",{resturant:foundResturant,moment:moment});
+        res.render("show",{resturant:foundHotel,moment:moment});
     });
     });
 

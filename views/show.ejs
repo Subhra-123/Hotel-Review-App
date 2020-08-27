@@ -1,6 +1,6 @@
 <%- include ('partials/header') %>
-<div class="container" style="justify-content: center;align-items: center;">
-    <div class="row" >
+<div class="container" style="justify-content: center;align-items: center; margin: auto 0 0 auto ;">
+    <div class="row"  >
         <!-- <div class="col-md-3">
             <p class="lead">Res-Review</p>
             <div class="list-group">
@@ -13,7 +13,7 @@
             <div class="thumbnail post">
                 <img class="img-responsive"class="img-fluid" alt="Responsive image" style="width:100%" src="<%=resturant.image %>">
               <div class="caption-full">
-                <h4 class="pull-right">Rs 4000/night</h4>
+                <h4 class="pull-right">₹ <%=resturant.price%>/Night</h4>
                 <h4><a><%=resturant.name%></a></h4>
                 <p><%=resturant.description %></p>
                 <p>
@@ -31,7 +31,7 @@
             <a class="btn btn-success button" href="/hotels/<%=resturant._id%>/comments/new">Write A Review</a>
         </div>
         <%resturant.comments.forEach(function(comment){%>
-            <div class="well comment">
+            <div class="well comment" >
                 
                     <div class="row">
                         <div class="col-md-12">
