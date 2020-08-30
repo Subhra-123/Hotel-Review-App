@@ -109,7 +109,7 @@ ul li a:hover{
 }
 .btn-primary{
     color:white;
-    background-color: #10161a;
+    background-color: black;
     /* border-color: #2e6da4; */
     border-radius: 8px;
     font-size: 13px;
@@ -117,11 +117,8 @@ ul li a:hover{
 }
 
 .btn-primary:hover{
-    color:black;
-    background-color: white;
-    /* border-color: #2e6da4; */
-    border-radius: 8px;
-    font-size: 13px;
+    color:   #fbc531;
+    background-color: black;
     
 }
 #logo{
