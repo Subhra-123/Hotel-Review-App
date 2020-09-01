@@ -82,9 +82,21 @@ ul li{
     background-color:#484848;
     margin-bottom: 50px;
     border-radius: 4px;
-    margin:4px 4px 31px 4px
-    
+    margin:4px 4px 31px 4px;
+    z-index: 1071;
+    /* background: linear-gradient(to right bottom,#484848, 50%,#484848 50%);
+    background-image: linear-gradient(to right bottom, #484848, 50%, #484848, 50%);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial; */
 }
+    
+
 ul li {
     list-style: none;
     margin: 10px 10px 10px 5px;
@@ -115,7 +127,12 @@ ul li a:hover{
     font-size: 13px;
     transition: 0.3s;
 }
-
+.btn-success {
+    transition: 0.3s;
+}
+.btn-success:hover{
+    color:   #fbc531;
+}
 .btn-primary:hover{
     color:   #fbc531;
     background-color: black;
@@ -135,4 +152,21 @@ ul li a:hover{
 .navbar-brand:hover{
     color: white;
     color: #fbc531;
+}
+.img_style {
+    background-size: cover;
+}
+
+.res_name{
+    font-family: 'Playfair Display', serif;
+}
+.btn{
+    font-family: 'Alata', sans-serif;
+    text-align: center;
+}
+#heading{
+    font-family: 'Lora', serif;
+}
+.jumbotron{
+    border-radius: 24px;
 }
