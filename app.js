@@ -22,7 +22,8 @@ var authRoutes=require("./routes/index");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine","ejs");
 // app.use(express.static("public"));
-app.use("/public", express.static("public"));
+// app.use(__dirname, express.static("public"));
+app.use(express.static('public'))
 app.use(methodOverride("_method"));
 app.use(flash());
 
