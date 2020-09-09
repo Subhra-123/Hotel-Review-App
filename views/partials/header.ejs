@@ -11,52 +11,71 @@
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Alata&family=Playfair+Display&family=Russo+One&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Playfair+Display&family=Russo+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:wght@500&family=Playfair+Display&family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Playfair+Display&family=Russo+One&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:wght@500&family=Playfair+Display&family=Russo+One&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../public/stylesheets/main.css">
 </head>
 
 <body>
-    <nav class="navigation-bar">
+    <!-- <nav class="navigation-bar">
 
         <div class="navbar-header">
-           <a href="/hotels"><img id="logo" src="https://img.icons8.com/metro/26/000000/5-star-hotel.png" /></a>  <a 
+            <a href="/hotels"><img id="logo" src="https://img.icons8.com/metro/26/000000/5-star-hotel.png" /></a> <a
                 class="navbar-brand" href="/hotels">Hotel-Review</a>
 
         </div>
-            <div class="container">
-                <ul class="links">
-                    <% if(!currentUser){%>
-                    <li class="elements"><a href="/login"> <i class="fa fa-user" aria-hidden="true"></i> Login</a></li>
-                    <li class="elements"><a href="/register">Sign-up</a></li>
-                    <%}else{%>
-                    <li class="elements"><a href="#">Signed in As <%=currentUser.username%></a></li>
-                    <li class="elements"><a href="/logout">Log-Out</a></li>
-                    <%}%>
-                    </ul>
+        <div class="container">
+            <ul class="links">
+                <% if(!currentUser){%>
+                <li class="elements"><a href="/login"> <i class="fa fa-user" aria-hidden="true"></i> Login</a></li>
+                <li class="elements"><a href="/register">Sign-up</a></li>
+                <%}else{%>
+                <li class="elements"><a href="#">Signed in As <%=currentUser.username%></a></li>
+                <li class="elements"><a href="/logout">Log-Out</a></li>
+                <%}%>
+
+                  </ul>
                     
         
                 </div>
         
             </div>
-        </nav>
+        </nav> -->
+
+        <header class="navigation">
+            <div class="brand">
+               <a href="/hotels"><i class="fa fa-h-square" aria-hidden="true"></i></a> 
+                <h4><a href="/hotels">Hotel-Review</a></h4>
+            </div>
+            <div class="items">
+                <ul class="links">
+                    <li><a href="/hotels" >Home</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Sign-Up</a></li>
+                    <li><a>Contact Us</a></li>
+                </ul>
+            </div>
+        </header>
     
         
         
         
-        <div class="container">
+        <div class="container" id="auth-con">
             <% if(error&&error.length>0){%>
-                    <div class="alert alert-danger" role="alert">
-                        <%=error%>
-                    </div>
-                    <%}%>
+                <div class="alert alert-danger" role="alert">
+                    <%=error%>
+                </div>
+                <%}%>
             <% if(success&&success.length>0){%>
-                    <div class="alert alert-success" role="alert">
-                        <%=success%>
-                    </div>
-                    <%}%>
+                <div class="alert alert-success" role="alert">
+                    <%=success%>
+                </div>
+                <%}%>
               
         </div>
         

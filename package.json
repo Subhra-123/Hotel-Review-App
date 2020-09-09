@@ -1,7 +1,7 @@
 {
-  "name": "yelp-camp",
+  "name": "hotel-review",
   "version": "1.0.0",
-  "description": "yelp camp",
+  "description": "hotel review application",
   "main": "app.js",
   "scripts": {
     "watch": "nodemon ",
