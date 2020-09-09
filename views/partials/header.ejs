@@ -54,15 +54,18 @@
             </div>
             <div class="items">
                 <ul class="links">
-                    <li><a href="/hotels" >Home</a></li>
+                    <li><a href="/hotels" ><i class="fa fa-home" aria-hidden="true"style="margin-right: 5px;"></i>
+                        Home</a></li>
                     <% if(!currentUser){%>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/register">Sign-Up</a></li>
+                    <li><a href="/login"><i class="fa fa-user-circle" aria-hidden="true"style="margin-right: 5px;"></i>
+                        Login</a></li>
+                    <li><a href="/register"><i class="fa fa-sign-in" aria-hidden="true" style="margin-right: 5px;"></i>
+                        Sign-Up</a></li>
                     <%}else{%>
                         <li ><a href="#">Signed in As <%=currentUser.username%></a></li>
                         <li><a href="/logout">Log-Out</a></li>
                         <%}%>
-                    <li><a>Contact Us</a></li>
+                    <li><a><i class="fa fa-phone" aria-hidden="true" style="margin-right: 5px;"></i>Contact Us</a></li>
                 </ul>
             </div>
         </header>
