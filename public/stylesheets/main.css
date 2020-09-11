@@ -223,3 +223,11 @@ ul li a:hover{
     margin:50px;
 }
 
+.navigation{
+    top: 0;
+/* left: auto; */
+/* right: 0; */
+position: fixed;
+z-index: 5;
+width: 100%;
+}
