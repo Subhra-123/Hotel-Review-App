@@ -9,7 +9,7 @@ middlewareObj.checkResturantOwnership=function (req,res,next){
             res.redirect("back");
             else
             {
-                if(foundResturant.author.id.equals(req.user._id))
+                if(currentUser && currentUser.username==='admin')
                 next();
         else
       {req.flash("error","You don't have permission to do that"); res.redirect("back");}
